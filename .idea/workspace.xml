@@ -8,13 +8,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/test/Test1.java" afterDir="false" />
+    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="提交作业">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/src.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/calculator/Calc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/calculator/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/calculator/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaProject_Nine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JavaProject_Nine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/xiwangly/test/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiwangly/test/Test1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -44,6 +55,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "java.suggest.annotation.dependency": "false",
     "last_opened_file_path": "D:/项目/Java Web/practice",
@@ -51,15 +63,20 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "全局库",
-    "project.structure.proportion": "0.0",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="应用程序.CircleDemo">
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.xiwangly.calculator" />
+    </key>
+  </component>
+  <component name="RunManager">
     <configuration name="AbsDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.m2.AbsDemo" />
       <module name="JavaProject_Nine" />
@@ -80,6 +97,19 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.m2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Calc" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.xiwangly.calculator.Calc" />
+      <module name="JavaProject_Nine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.xiwangly.calculator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -113,26 +143,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HelloWorld" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.m1.HelloWorld" />
-      <module name="JavaProject_Nine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.m2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Calc" />
         <item itemvalue="应用程序.CircleDemo" />
         <item itemvalue="应用程序.AbsDemo" />
         <item itemvalue="应用程序.CalculateDemo" />
         <item itemvalue="应用程序.ArgsDemo" />
-        <item itemvalue="应用程序.HelloWorld" />
       </list>
     </recent_temporary>
   </component>
@@ -158,8 +175,24 @@
       <workItem from="1677583552077" duration="1521000" />
       <workItem from="1677671915306" duration="244000" />
       <workItem from="1677672171333" duration="1251000" />
-      <workItem from="1677720903344" duration="633000" />
+      <workItem from="1677720903344" duration="2111000" />
+      <workItem from="1677732927853" duration="4943000" />
     </task>
+    <task id="LOCAL-00001" summary="提交作业">
+      <created>1677721689596</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677721689596</updated>
+    </task>
+    <task id="LOCAL-00002" summary="提交作业">
+      <created>1677721697616</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677721697616</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +208,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="提交作业" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交作业" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
