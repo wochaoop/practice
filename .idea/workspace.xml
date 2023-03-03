@@ -8,9 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="提交，计算器，支持三角函数，用法math.sin(value)">
+    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="提交作业">
+      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/work/Work9.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/xiwangly/work/Work8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/xiwangly/work/Work8.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +169,7 @@
       <workItem from="1677671915306" duration="244000" />
       <workItem from="1677672171333" duration="1251000" />
       <workItem from="1677720903344" duration="2111000" />
-      <workItem from="1677732927853" duration="9018000" />
+      <workItem from="1677732927853" duration="13165000" />
     </task>
     <task id="LOCAL-00001" summary="提交作业">
       <created>1677721689596</created>
@@ -206,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677741364276</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="提交作业">
+      <created>1677754840947</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1677754840947</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,10 +231,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="提交作业" />
     <MESSAGE value="提交，计算器" />
     <MESSAGE value="提交，计算器，支持三角函数，用法math.sin(value)" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交，计算器，支持三角函数，用法math.sin(value)" />
+    <MESSAGE value="提交作业" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交作业" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
