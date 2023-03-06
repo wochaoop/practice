@@ -8,8 +8,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="提交作业">
+    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/example/m4/HalloAccp2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/example/m4/HalloAccp2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="IharaYuki" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -40,6 +46,11 @@
         <option name="url" value="https://github.com/wochaoop/practice.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/com/example/m4/HalloAccp2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/xiwangly/work/Work6.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/xiwangly/work/Work7.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,7 +82,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "shared-indexes",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -80,24 +91,10 @@
       <recent name="com.xiwangly.calculator" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.AbsDemo">
+  <component name="RunManager" selected="应用程序.HalloAccp2">
     <configuration name="AbsDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.m2.AbsDemo" />
       <module name="JavaProject_Nine" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.example.m2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ArgsDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.m2.ArgsDemo" />
-      <module name="JavaProject_Nine" />
-      <option name="PROGRAM_PARAMETERS" value="123 321 123" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.m2.*" />
@@ -147,13 +144,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HalloAccp2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.m4.HalloAccp2" />
+      <module name="JavaProject_Nine" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.m4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.HalloAccp2" />
         <item itemvalue="应用程序.Calc" />
         <item itemvalue="应用程序.CircleDemo" />
         <item itemvalue="应用程序.AbsDemo" />
         <item itemvalue="应用程序.CalculateDemo" />
-        <item itemvalue="应用程序.ArgsDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -183,7 +193,7 @@
       <workItem from="1677732927853" duration="13165000" />
       <workItem from="1678082709007" duration="659000" />
       <workItem from="1678083377260" duration="8000" />
-      <workItem from="1678084450868" duration="657000" />
+      <workItem from="1678084450868" duration="1302000" />
     </task>
     <task id="LOCAL-00001" summary="提交作业">
       <created>1677721689596</created>
@@ -227,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1677754840947</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="提交作业">
+      <created>1678086174537</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678086174537</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +266,7 @@
     <MESSAGE value="提交，计算器，支持三角函数，用法math.sin(value)" />
     <MESSAGE value="提交作业" />
     <option name="LAST_COMMIT_MESSAGE" value="提交作业" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
