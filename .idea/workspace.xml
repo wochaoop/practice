@@ -8,7 +8,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="提交" />
+    <list default="true" id="65448a13-04b0-4f35-b169-b1079dc29606" name="变更" comment="提交作业">
+      <change afterPath="$PROJECT_DIR$/src/com/xiwangly/work/Work9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -166,8 +169,7 @@
       <workItem from="1677671915306" duration="244000" />
       <workItem from="1677672171333" duration="1251000" />
       <workItem from="1677720903344" duration="2111000" />
-      <workItem from="1677732927853" duration="13348000" />
-      <workItem from="1677902363812" duration="4835000" />
+      <workItem from="1677732927853" duration="13165000" />
     </task>
     <task id="LOCAL-00001" summary="提交作业">
       <created>1677721689596</created>
@@ -211,28 +213,7 @@
       <option name="project" value="LOCAL" />
       <updated>1677754840947</updated>
     </task>
-    <task id="LOCAL-00007" summary="提交作业9">
-      <created>1677861854394</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1677861854394</updated>
-    </task>
-    <task id="LOCAL-00008" summary="提交">
-      <created>1678086411615</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1678086411615</updated>
-    </task>
-    <task id="LOCAL-00009" summary="提交">
-      <created>1678086693262</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1678086693262</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,9 +234,7 @@
     <MESSAGE value="提交，计算器" />
     <MESSAGE value="提交，计算器，支持三角函数，用法math.sin(value)" />
     <MESSAGE value="提交作业" />
-    <MESSAGE value="提交作业9" />
-    <MESSAGE value="提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="提交作业" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
