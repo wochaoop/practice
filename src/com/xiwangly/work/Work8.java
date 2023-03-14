@@ -1,4 +1,4 @@
-package com.xiwangly.test.work;
+package com.xiwangly.work;
 
 public class Work8 {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Work8 {
             index++;
         }
 
-        if (num < 0) {
+//        if (num < 0) {
             // 负数的补码等于其绝对值的按位取反再加一
             for (int i = 0; i < binaryArray.length; i++) {
                 binaryArray[i] = binaryArray[i] == '0' ? '1' : '0';
@@ -29,7 +29,7 @@ public class Work8 {
                     carry = 0;
                 }
             }
-        }
+//        }
 
         String binaryString = new String(binaryArray);
         System.out.println(binaryString);
