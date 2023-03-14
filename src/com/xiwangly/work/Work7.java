@@ -1,4 +1,4 @@
-package com.xiwangly.test.work;
+package com.xiwangly.work;
 
 import java.util.Scanner;
 
@@ -18,29 +18,27 @@ public class Work7 {
         double result;
 
         switch (operator) {
-            case '+':
+            case '+' -> {
                 result = num1 + num2;
                 System.out.printf("%.2f + %.2f = %.2f", num1, num2, result);
-                break;
-            case '-':
+            }
+            case '-' -> {
                 result = num1 - num2;
                 System.out.printf("%.2f - %.2f = %.2f", num1, num2, result);
-                break;
-            case '*':
+            }
+            case '*' -> {
                 result = num1 * num2;
                 System.out.printf("%.2f * %.2f = %.2f", num1, num2, result);
-                break;
-            case '/':
+            }
+            case '/' -> {
                 if (num2 == 0) {
                     System.out.println("除数不能为0！");
                     return;
                 }
                 result = num1 / num2;
                 System.out.printf("%.2f / %.2f = %.2f", num1, num2, result);
-                break;
-            default:
-                System.out.println("无效的运算符！");
-                break;
+            }
+            default -> System.out.println("无效的运算符！");
         }
 
         input.close();
