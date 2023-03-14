@@ -1,4 +1,4 @@
-package com.xiwangly.test.work;
+package com.xiwangly.work;
 
 public class Work6_old {
     public static void main(String[] args) {
