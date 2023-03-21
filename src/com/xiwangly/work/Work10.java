@@ -15,12 +15,15 @@ public class Work10 {
         System.out.println("啃骨头");
     }
 
+
     public void run() {
         System.out.println("叼着骨头跑");
     }
+    public void info() {System.out.println("姓名:"+name+" 颜色:"+color+" 品种:"+variety);}
 
     public static void main(String[] args) {
         Work10 wuhuarou = new Work10("五花肉", "棕色", "阿拉斯加");
+        wuhuarou.info();
         wuhuarou.eat();
         wuhuarou.run();
     }
