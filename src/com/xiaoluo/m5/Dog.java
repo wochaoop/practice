@@ -21,6 +21,6 @@ public class Dog {
         dog.color = "棕色";
         dog.variety = "阿拉斯加";
         dog.eat();
-        dog.run();
+        dog.run();//wo
     }
 }
