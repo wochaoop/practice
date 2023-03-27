@@ -9,7 +9,9 @@
 
 要参与HTML、CSS、Javascript的练习，请签出[html](https://github.com/wochaoop/practice/tree/html)分支
 
-以此类推
+本来是不推荐使用分支来分离不同语言的练习项目，但是考虑到入门的需求，使用了这种方法
+
+后续更正式的项目会分开存储库
 
 本存储库对应了我们的教材以及课后习题的练习
 
