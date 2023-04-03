@@ -1,4 +1,4 @@
-package com.xiwangly.test;
+package top.xiwangly.test;
 import java.math.BigInteger;
 public class BigFactorial {
     public static void main(String[] args) {

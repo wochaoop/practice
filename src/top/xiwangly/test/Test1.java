@@ -1,4 +1,4 @@
-package com.xiwangly.test;
+package top.xiwangly.test;
 
 public class Test1 {
     public static void main(String[] args) {
