@@ -1,4 +1,4 @@
-package com.xiwangly.work;
+package top.xiwangly.work;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.xiwangly.calculator;
+package top.xiwangly.calculator;
 
 import java.io.IOException;
 import java.net.URI;
