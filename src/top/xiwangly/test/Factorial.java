@@ -1,4 +1,4 @@
-package com.xiwangly.test;
+package top.xiwangly.test;
 
 public class Factorial {
     public static long factorial(long num) {

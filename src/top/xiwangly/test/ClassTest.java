@@ -1,4 +1,4 @@
-package com.xiwangly.test;
+package top.xiwangly.test;
 
 class Animal {
     void eat() {

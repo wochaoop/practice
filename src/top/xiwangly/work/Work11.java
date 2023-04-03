@@ -1,4 +1,4 @@
-package com.xiwangly.work;
+package top.xiwangly.work;
 
 public class Work11 {
     private String name;
