@@ -1,4 +1,4 @@
-package src.com.xiwangly.test;
+package top.xiwangly.test;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
