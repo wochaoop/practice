@@ -1,4 +1,4 @@
-package com.xiwangly.test;
+package top.xiwangly.test;
 
 import java.util.Scanner;
 public class HelloAccp2 {
