@@ -1,4 +1,4 @@
-package src.com.xiwangly.work;
+package top.xiwangly.work;
 
 class Timer {
     int minute, second;
