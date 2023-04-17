@@ -1,4 +1,4 @@
-package com.example.m5;
+package src.com.example.m5;
 
 public class Student {
         int age;
