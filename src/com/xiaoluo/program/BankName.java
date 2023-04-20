@@ -26,11 +26,10 @@ public class BankName {
         String Password = null;
         while (true) {
             String PrintPassword = word.next();
-            if(PrintPassword.equals(password)) {
+            if (PrintPassword.equals(password)) {
                 System.out.println("密码正确，进入系统");
                 break;
-            }
-            else {
+            } else {
                 System.out.println("密码错误，请重新输入");
             }
         }
@@ -42,7 +41,7 @@ public class BankName {
         String Password = null;
         while (true) {
             String PrintPassword = word.next();
-            if(PrintPassword.equals(password)) {
+            if (PrintPassword.equals(password)) {
                 System.out.println("密码正确，请输入您要修改的密码");
                 Scanner password1 = new Scanner(System.in);
                 String n = password1.next();
@@ -50,17 +49,15 @@ public class BankName {
                 while (true) {
                     Scanner password2 = new Scanner(System.in);
                     String m = password2.next();
-                    if(m.equals(n)) {
+                    if (m.equals(n)) {
                         System.out.println("输入正确，密码修改成功");
                         password = m;
                         break;
-                    }
-                    else {
+                    } else {
                         System.out.println("输入错误，请重新输入");
                     }
                 }
-            }
-            else {
+            } else {
                 System.out.println("密码错误，请重新输入");
             }
         }

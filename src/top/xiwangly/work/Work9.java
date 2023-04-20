@@ -21,8 +21,7 @@ public class Work9 {
                 System.exit(1);
             }
             System.out.println(sum);
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("输入错误");
             System.exit(1);
         }

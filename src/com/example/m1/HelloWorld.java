@@ -5,11 +5,11 @@ public class HelloWorld {
 
 
     public static void main(String[] args) {
-        int i=1;
-        for (i=1;i<=Integer.MAX_VALUE;i++){
+        int i = 1;
+        for (i = 1; i <= Integer.MAX_VALUE; i++) {
             System.out.println(i);
         }
 
     }
-    }
+}
 
