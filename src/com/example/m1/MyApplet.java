@@ -1,4 +1,5 @@
 package com.example.m1;
+
 import java.awt.*;
 import java.applet.*;
 
@@ -7,8 +8,8 @@ import java.applet.*;
  * @Project JavaProject_Nine
  **/
 public class MyApplet extends Applet {
-    public void paint(Graphics g){
-        g.drawString("Hello,I am Applet!",10,20);
+    public void paint(Graphics g) {
+        g.drawString("Hello,I am Applet!", 10, 20);
 
     }
 }

@@ -5,6 +5,7 @@
 该对象调用showInfo方法，观察运行结果。
 */
 package top.xiwangly.work;
+
 public class Parent {
     private String name;
 

@@ -8,11 +8,11 @@ public class Dog {
     String variety;
 
     public void eat() {
-        System.out.println( variety + name + "啃骨头");
+        System.out.println(variety + name + "啃骨头");
     }
 
     public void run() {
-        System.out.println( variety + name + "能叼着骨头跑");
+        System.out.println(variety + name + "能叼着骨头跑");
     }
 
     public static void main(String[] args) {
