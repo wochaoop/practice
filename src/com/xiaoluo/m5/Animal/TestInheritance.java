@@ -1,4 +1,4 @@
-package src.com.xiaoluo.m5.Animal;
+package com.xiaoluo.m5.Animal;
 
 public class TestInheritance {
     public static void main(String[] args) {
