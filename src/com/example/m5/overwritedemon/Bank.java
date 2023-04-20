@@ -6,16 +6,19 @@ class Bank {
     }
 }
 class SBI extends Bank {
+    @Override
     int getRateOfInterest() {
         return 8;
     }
 }
 class ICICI extends Bank {
+    @Override
     int getRateOfInterest() {
         return 7;
     }
 }
 class AXIS extends Bank {
+    @Override
     int getRateOfInterest() {
         return 9;
     }
