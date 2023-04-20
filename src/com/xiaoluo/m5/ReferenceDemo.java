@@ -1,4 +1,4 @@
-package src.com.xiaoluo.m5;
+package com.xiaoluo.m5;
 
 public class ReferenceDemo {
     public static void main(String[] args) {
