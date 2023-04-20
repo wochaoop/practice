@@ -6,6 +6,7 @@ class Vehicle {
     }
 }
 class Bike2 extends Vehicle {
+    @Override
     void run() {
         System.out.println("Bike is running safely");
     }
