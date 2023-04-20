@@ -1,6 +1,6 @@
 package com.xiaoluo.m5.overwritedemo;
 
-public class AXIS extends Bank{
+public class AXIS extends Bank {
     float fRate = 9.0f;
 
     @Override

@@ -5,24 +5,28 @@ class Bank {
         return 0;
     }
 }
+
 class SBI extends Bank {
     @Override
     int getRateOfInterest() {
         return 8;
     }
 }
+
 class ICICI extends Bank {
     @Override
     int getRateOfInterest() {
         return 7;
     }
 }
+
 class AXIS extends Bank {
     @Override
     int getRateOfInterest() {
         return 9;
     }
 }
+
 class Test2 {
     public static void main(String args[]) {
         SBI s = new SBI();

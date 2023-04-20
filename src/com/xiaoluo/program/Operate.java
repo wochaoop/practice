@@ -22,21 +22,21 @@ public class Operate extends BankName {
         System.out.println("5.结束服务");
         Scanner n = new Scanner(System.in);
         int num = n.nextInt();
-            switch (num) {
-                case 1:
-                    bankName1.deposit();
-                    bankName1.CheckBalance();
-                    break;
-                case 2:
-                    bankName1.Withdrawal();
-                    bankName1.CheckBalance();
-                    break;
-                case 3:
-                    bankName1.CheckBalance();
-                case 4:
-                    bankName1.RevisePassword();
-                case 5:
-                    break;
-            }
+        switch (num) {
+            case 1:
+                bankName1.deposit();
+                bankName1.CheckBalance();
+                break;
+            case 2:
+                bankName1.Withdrawal();
+                bankName1.CheckBalance();
+                break;
+            case 3:
+                bankName1.CheckBalance();
+            case 4:
+                bankName1.RevisePassword();
+            case 5:
+                break;
+        }
     }
 }

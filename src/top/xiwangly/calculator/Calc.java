@@ -17,7 +17,7 @@ public class Calc {
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("http://localhost:5000/webhook?message="+message))
+                .uri(URI.create("http://localhost:5000/webhook?message=" + message))
                 .build();
 
         HttpResponse<String> response = client.send(request,
