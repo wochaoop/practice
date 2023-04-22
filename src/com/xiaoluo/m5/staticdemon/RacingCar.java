@@ -1,4 +1,4 @@
-package src.com.xiaoluo.m5.staticdemon;
+package com.xiaoluo.m5.staticdemon;
 
 public class RacingCar {
     static int num;
