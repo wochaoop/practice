@@ -21,9 +21,14 @@ public class Person {
     public static void main(String[] args) {
         Person p = new Person("小黄");
         p.speak();
+
         Person p1 = new Person("小黄", 19);
         p1.speak();
+
         Person p2 = new Person();
         p2.speak();
+
+        Object object = new Object();
+        Object obj1 = 1;
     }
 }

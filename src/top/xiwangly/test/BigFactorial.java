@@ -1,5 +1,7 @@
 package top.xiwangly.test;
+
 import java.math.BigInteger;
+
 public class BigFactorial {
     public static void main(String[] args) {
         BigInteger num = new BigInteger("8848"); // 需要计算阶乘的大数

@@ -1,4 +1,4 @@
-package src.com.xiaoluo.m5;
+package com.xiaoluo.m5;
 
 public class SchoolStudent {
     String name;
