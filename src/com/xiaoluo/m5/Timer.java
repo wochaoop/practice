@@ -1,8 +1,9 @@
-package src.com.xiaoluo.m5;
+package com.xiaoluo.m5;
 
 class Timer {
-    int minute,second;
-    public Timer(int m,int s) {
+    int minute, second;
+
+    public Timer(int m, int s) {
         minute = m;
         second = s;
     }
