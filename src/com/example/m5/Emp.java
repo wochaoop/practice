@@ -1,6 +1,4 @@
-package com.example.m5.overwritedemon;
-
-import com.example.m5.Person;
+package com.example.m5;
 
 public class Emp extends Person {
     private String job;
