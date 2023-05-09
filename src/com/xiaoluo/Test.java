@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Test {
     public static void main(String[] args) {
+        int[] a = {};
         Scanner sc = new Scanner(System.in);
         System.out.println("请输入学生的人数：");
         int r = sc.nextInt();
