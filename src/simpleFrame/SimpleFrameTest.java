@@ -46,7 +46,7 @@ public class SimpleFrameTest {
             frame.setSize(screenWidth/2,screenHeight/2);    //使用合适的百分比指定窗体的大小
 
             Image img = new ImageIcon("image/avatar.jpg").getImage();
-            frame.setIconImage(img);
+            frame.setIconImage(img);                                            //提供窗口图标
         });
     }
     /*
