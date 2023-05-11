@@ -45,7 +45,7 @@ public class SimpleFrameTest {
             int screenHeight = screenSize.height;   //使用Dimension对象用公共（！）实例变量width和height同时保存屏幕的宽度和高度
             frame.setSize(screenWidth/2,screenHeight/2);    //使用合适的百分比指定窗体的大小
 
-            Image img = new ImageIcon().getImage();
+            Image img = new ImageIcon("image/avatar.jpg").getImage();
             frame.setIconImage(img);
         });
     }
