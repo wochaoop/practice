@@ -56,16 +56,42 @@ public class SimpleFrameTest {
      */
 }
 
+class SimpleFrame extends JFrame {      //子类SimpleFrame继承父类JFrame的属性
+
+    public SimpleFrame() {  //重写SimpleFrame类的构造方法
+        add(new MyComponent());     //将一个给定的组件添加到该窗体的内容窗格中，并返回这个组件
+        pack();     //调整窗口大小，要考虑其组件的首选大小
+    }
+}
+
 /*
-    在默认情况下，窗口的大小为0X0像素
-    定义一个子类SimpleFrame，它的构造器设定窗机大小，这是SimpleFrame与JFrame之间的唯一差别
+    将一个组件添加到窗体中，并在这个组件上绘制消息
+    定义一个扩展JComponent的类，并覆盖其中的paintComponent方法
  */
 
-class SimpleFrame extends JFrame {      //子类SimpleFrame继承父类JFrame的属性，用于设置窗口的高度和宽度
-    private static final int DEFAULT_WIDTH = 0;
-    private static final int DEFAULT_HEIGHT = 0;
+class MyComponent extends JComponent {
 
-    public SimpleFrame() {
-        setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
+    public static final int MESSAGE_X = 300;
+    public static final int MESSAGE_Y = 200;
+
+    private static final int DEFAULT_WIDTH = 800;
+    private static final int DEFAULT_HEIGHT = 500;
+
+    public void paintComponent(Graphics g) {    //覆盖这个方法来描述需要如何绘制组件
+        /*
+            paintComponent方法有一个Graphics类型的参数，
+            Graphics对象保存着用于绘制图像和文本的一组设置
+            例如，设置的字体或当前的颜色
+            所有的绘制必须通过Graphics对象完成，其中包含了绘制团、图像和文本的方法
+         */
+        g.drawString("这里随便写点东西",MESSAGE_X,MESSAGE_Y);
+    }
+
+    public Dimension getPreferredSize() {
+        /*
+            最后，组件要告诉用户它会有多大
+            覆盖getPreferredSize方法，返回一个包含首选宽度和高度的Dimension类对象
+         */
+        return new Dimension(DEFAULT_WIDTH,DEFAULT_HEIGHT);
     }
 }
