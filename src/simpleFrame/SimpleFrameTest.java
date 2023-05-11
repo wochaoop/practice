@@ -29,8 +29,24 @@ public class SimpleFrameTest {
                 如果只是构造窗体，并不会自动显示这个窗体
                 程序员可以在第一次显示之前向其中添加组件
              */
-            frame.setResizable(true);
-            frame.setTitle("这是一个窗口");
+            frame.setLocation(400,200);
+            /*
+                setLocation(x,y)方法用于调整窗体位置
+                等同于这行代码frame.setBounds(400,200,800,500);    setBounds（x,y,width,height)方法用于调整窗体位置和大小
+                此处x,y,width,height都为int类型
+             */
+            frame.setResizable(true);       //确定是否允许用户改变窗体的大小
+
+            frame.setTitle("这是一个窗口");   //设置窗体标题，将方法内设置的属性返回给方法作为窗体的标题
+
+            Toolkit kit = Toolkit.getDefaultToolkit();  //调用Toolkit类的静态方法getDefaultToolkit得到一个kit对象     Toolkit类相当于一个“地基”，包含大量与原生窗口系统交互的方法
+            Dimension screenSize = kit.getScreenSize();     //调用getScreenSize方法，这个方法以Dimension对象的形式返回屏幕大小
+            int screenWidth = screenSize.width;
+            int screenHeight = screenSize.height;   //使用Dimension对象用公共（！）实例变量width和height同时保存屏幕的宽度和高度
+            frame.setSize(screenWidth/2,screenHeight/2);    //使用合适的百分比指定窗体的大小
+
+            Image img = new ImageIcon().getImage();
+            frame.setIconImage(img);
         });
     }
     /*
@@ -46,8 +62,8 @@ public class SimpleFrameTest {
  */
 
 class SimpleFrame extends JFrame {      //子类SimpleFrame继承父类JFrame的属性，用于设置窗口的高度和宽度
-    private static final int DEFAULT_WIDTH = 800;
-    private static final int DEFAULT_HEIGHT = 600;
+    private static final int DEFAULT_WIDTH = 0;
+    private static final int DEFAULT_HEIGHT = 0;
 
     public SimpleFrame() {
         setSize(DEFAULT_WIDTH, DEFAULT_HEIGHT);
