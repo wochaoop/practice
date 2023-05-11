@@ -1,6 +1,6 @@
 package simpleFrame;
 
-import javax.swing.*;
+import javax.swing.*;   //javax表示这是一个扩展包，而不是核心包，从1.2版本每个Java实现都含有这些包
 import java.awt.*;
 
 /*
@@ -12,15 +12,38 @@ import java.awt.*;
 
 public class SimpleFrameTest {
     public static void main(String[] args) {
-        EventQueue.invokeLater(() ->{       //事件分派线程，它讲鼠标点击和按钮等时间传递给用户界面组件
-            var frame = new SimpleFrame();
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setVisible(true);
+        EventQueue.invokeLater(() ->{
+            /*
+                事件分派线程，它将鼠标点击和按钮等时间传递给用户界面组件
+                EventQueue.invokeLater(() ->{
+                });
+             */
+            var frame = new SimpleFrame();  //构造SimpleFrame的对象
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);   //在用户关闭这个窗体时，简单的退出程序
+            /*
+                在包含多个窗体的其他程序中，一般用户关闭其中一个窗体程序只会将窗体隐藏起来，而程序并没有中止
+                一旦最后一个程序不可见，程序才中止，这样处理比较合适，但Swing并不是这样工作的
+             */
+            frame.setVisible(true);     //使窗体可见
+            /*
+                如果只是构造窗体，并不会自动显示这个窗体
+                程序员可以在第一次显示之前向其中添加组件
+             */
             frame.setResizable(true);
             frame.setTitle("这是一个窗口");
         });
     }
+    /*
+        完成了初始化语句之后，main方法推出
+        退出main方法并没有中止程序，中止的只是主线程
+        事件分派线程会保持程序处于激活状态，直到通过关闭窗体或调用System.in方法中止程序
+     */
 }
+
+/*
+    在默认情况下，窗口的大小为0X0像素
+    定义一个子类SimpleFrame，它的构造器设定窗机大小，这是SimpleFrame与JFrame之间的唯一差别
+ */
 
 class SimpleFrame extends JFrame {      //子类SimpleFrame继承父类JFrame的属性，用于设置窗口的高度和宽度
     private static final int DEFAULT_WIDTH = 800;
