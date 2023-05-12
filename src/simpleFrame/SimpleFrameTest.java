@@ -2,6 +2,9 @@ package simpleFrame;
 
 import javax.swing.*;   //javax表示这是一个扩展包，而不是核心包，从1.2版本每个Java实现都含有这些包
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
+import java.awt.geom.Line2D;
+import java.awt.geom.Rectangle2D;
 
 /*
     顶层窗口（就是没有包含在其他窗口中的窗口）称为窗体
@@ -65,7 +68,7 @@ class SimpleFrame extends JFrame {      //子类SimpleFrame继承父类JFrame的
 }
 
 /*
-    将一个组件添加到窗体中，并在这个组件上绘制消息
+    将一个组件添加到窗体中，并在这个组件上绘制
     定义一个扩展JComponent的类，并覆盖其中的paintComponent方法
  */
 
@@ -84,7 +87,35 @@ class MyComponent extends JComponent {
             例如，设置的字体或当前的颜色
             所有的绘制必须通过Graphics对象完成，其中包含了绘制团、图像和文本的方法
          */
-        g.drawString("这里随便写点东西",MESSAGE_X,MESSAGE_Y);
+        Graphics2D g2 = (Graphics2D) g;     //想要使用Java 2D库绘制图像，需要获得Graphics2D类的一个对象
+
+        g2.setPaint(Color.GREEN);
+
+        g2.drawString("这里随便写点东西",MESSAGE_X,MESSAGE_Y);
+
+        double leftX = 100;
+        double topY = 100;
+        double width = 200;
+        double height = 150;
+
+        g2.setPaint(Color.BLACK);
+
+        var rect = new Rectangle2D.Double(leftX,topY,width,height);
+        g2.draw(rect);                                                  //绘制一个矩形，左上角顶点坐标为（100，100），宽为200，高为150
+
+        var ellipse = new Ellipse2D.Double();
+        ellipse.setFrame(rect);
+        g2.draw(ellipse);                       //绘制上一个矩形的内接椭圆，两个对象采用的是同一组参数
+
+        g2.draw(new Line2D.Double(leftX,topY,leftX+width,topY+height));     //绘制一条直线，给定的是起始点和终点的坐标
+
+        double centerX = rect.getCenterX();
+        double centerY = rect.getCenterY(); //返回闭合矩形的中心点坐标
+        double radius = 150;
+
+        var circle = new Ellipse2D.Double();
+        circle.setFrameFromCenter(centerX,centerY,centerX+radius,centerY+radius);
+        g2.draw(circle);                                                                        //利用闭合矩形的中心点坐标绘制一个椭圆形
     }
 
     public Dimension getPreferredSize() {
