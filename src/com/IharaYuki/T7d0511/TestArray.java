@@ -42,13 +42,15 @@ public class TestArray {
     }
     public static void main(String[] args) {
         Item[] ary = new Item[4];
-        String[] arr = new String[]{"A1","B2","C3"
-        };
-
+        String[] arr = new String[]{"A1","A2","A3",};
         TestArray testArray = new TestArray();
         testArray.initAry(ary);
         testArray.travAry(ary);
         testArray.findMid(ary);
-        testArray.
+        TestArray testArray2 =new TestArray();
+        arr = testArray2.insert(arr,1,"A5");
+        for (String item:arr) {
+            System.out.println(item);
+        }
     }
 }
