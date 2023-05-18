@@ -2,6 +2,7 @@ package simpleFrame;
 
 import javax.swing.*;   //javax表示这是一个扩展包，而不是核心包，从1.2版本每个Java实现都含有这些包
 import java.awt.*;
+import java.awt.font.FontRenderContext;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
@@ -87,18 +88,57 @@ class MyComponent extends JComponent {
             例如，设置的字体或当前的颜色
             所有的绘制必须通过Graphics对象完成，其中包含了绘制团、图像和文本的方法
          */
-        Graphics2D g2 = (Graphics2D) g;     //想要使用Java 2D库绘制图像，需要获得Graphics2D类的一个对象
+        Graphics2D g2 = (Graphics2D) g;     //想要使用Java 2D库绘制图像，需要获得Graphics2D类的一个对象,此处的对象g2继承了g的属性和方法
 
-        g2.setPaint(Color.GREEN);
+        var component = new MyComponent();
+        g2.setBackground(Color.PINK);    //设置背景颜色，需要使用Component类种的setBackground方法
+        component.setForeground(Color.BLACK);   //setForeground方法，它会指定在组件上进行绘制时使用的默认颜色
 
-        g2.drawString("这里随便写点东西",MESSAGE_X,MESSAGE_Y);
+        g2.setPaint(Color.GREEN);   //为图形上下文上所有后续的绘制操作选择颜色
+
+        String message = "这里随便写点东西";
+
+        var f = new Font("Serif",Font.BOLD,36);     //创建一个新字体对象，里面的属性分别为字体名、字体风格、字体大小
+        g2.setFont(f);                                      //设置一个字体，传给g2
+
+        FontRenderContext context = g2.getFontRenderContext();  //获得一个字体绘制上下文，该字体指定了这个图形上下文种的字体属性
+        Rectangle2D bounds = f.getStringBounds(message,context);    //返回包围这个字符串的矩形
+        /*
+            矩形的起点为基线
+            矩形顶端的y坐标等于上坡度的负值，矩形的高度等于上坡度、下坡度和行间距之和，宽度等于字符串的宽度
+         */
+
+        double x = (getWidth() - bounds.getWidth()) / 2;
+        double y = (getHeight() - bounds.getHeight()) / 2;
+        /*
+            getWidth（）和getHeight（）方法用于获取窗体的宽度和高度，bounds.getWidth（）和bounds.getHeight（）方法用于获取字符串的宽度和高度
+            获取这四个数值是为了让该字符串再其组件中居中，而不是绘制在任意位置
+         */
+
+        double ascent = -bounds.getY(); //getY()方法以双精度返回框架矩形左上角的Y坐标，矩形顶部的y坐标为负值，因此加上负号获得矩形顶部高度
+        double baseY = y + ascent;  //字符串的上坡度
+
+        g2.drawString(message,(int) x,(int) baseY);  //在窗体的内容窗里面绘制一行字符
+
+        g2.setPaint(Color.LIGHT_GRAY);
+
+        g2.draw(new Line2D.Double(x,baseY,x+bounds.getWidth(),baseY));  //绘制一条基线
+
+        var rect1 = new Rectangle2D.Double(x,y,bounds.getWidth(),bounds.getHeight());
+        g2.draw(rect1);                                                                 //给定左上角，宽、高绘制一个矩形
 
         double leftX = 100;
         double topY = 100;
         double width = 200;
         double height = 150;
 
-        g2.setPaint(Color.BLACK);
+        g2.setPaint(Color.BLACK);   //想要多种颜色绘制，就需要选择一个颜色、绘制图形、再选择另外一种颜色、再绘制图形
+
+        /*
+            Color类用于定义颜色
+            Java.wat.Color类提供了13个预定义的常量，分别表示13种标准颜色：BLACK、BLUE、CYAN、DARK_GRAY、GRAY、GREEN、LIGHT_GRAY、MAGENTA、ORANGE、PINK、RED、WHITE、YELLOW
+            可以根据红、绿、蓝三个颜色分量来创建Color对象，从而指定一个定制颜色：   drawString("Welcome!",75,125);
+         */
 
         var rect = new Rectangle2D.Double(leftX,topY,width,height);
         g2.draw(rect);                                                  //绘制一个矩形，左上角顶点坐标为（100，100），宽为200，高为150
@@ -106,6 +146,10 @@ class MyComponent extends JComponent {
         var ellipse = new Ellipse2D.Double();
         ellipse.setFrame(rect);
         g2.draw(ellipse);                       //绘制上一个矩形的内接椭圆，两个对象采用的是同一组参数
+        g2.setPaint(Color.GRAY);
+        g2.fill(ellipse);           //用当前的颜料填充图形
+
+        g2.setPaint(Color.BLACK);
 
         g2.draw(new Line2D.Double(leftX,topY,leftX+width,topY+height));     //绘制一条直线，给定的是起始点和终点的坐标
 
