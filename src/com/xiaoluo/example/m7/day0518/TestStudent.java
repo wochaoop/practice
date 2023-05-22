@@ -40,9 +40,11 @@ public class TestStudent {
         Student[][] aryStudent = new Student[4][5];
         initAry(aryStudent);
         tralAry(aryStudent);
-        Student student = seachAry(aryStudent,"name22");
-        System.out.println("该学生的名字为：" + student.name);
-        System.out.println("该学生语文成绩为：" + student.cs_score);
-        System.out.println("该学生数学成绩为：" + student.math_score);
+        if (aryStudent != null) {
+            Student student = seachAry(aryStudent, "name22");
+            System.out.println("该学生的名字为：" + student.name);
+            System.out.println("该学生语文成绩为：" + student.cs_score);
+            System.out.println("该学生数学成绩为：" + student.math_score);
+        }
     }
 }
