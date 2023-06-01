@@ -2,6 +2,19 @@ package com.xiaoluo.example.m7.day0518;
 
 public class TestStudent {
 
+    public static void insertStudent(Student[][] aryStudent, int i, int j, Student student) {
+        Student[] new_aryStudent_i = new Student[aryStudent[i].length+1];
+        int index = 0;
+        for (; index <= j - 1; index++)  {
+            new_aryStudent_i[index] = aryStudent[i][index];
+        }
+        new_aryStudent_i[j] = student;
+        for (;index < aryStudent[i].length;index++) {
+            new_aryStudent_i[index + 1] = aryStudent[i][index];
+        }
+        aryStudent[i] = new_aryStudent_i;
+    }
+
     public static void initAry(Student[][] aryStudent) {
         for (int i = 0; i < aryStudent.length; i++) {
             for (int j = 0; j < aryStudent[i].length; j++) {
