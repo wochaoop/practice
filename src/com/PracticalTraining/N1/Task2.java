@@ -1,4 +1,4 @@
-package com.PracticalTraining;
+package com.PracticalTraining.N1;
 
 public class Task2 {
     public static void main(String[] args) {
