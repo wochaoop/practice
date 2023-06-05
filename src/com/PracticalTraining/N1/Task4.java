@@ -1,4 +1,4 @@
-package com.PracticalTraining;
+package com.PracticalTraining.N1;
 
 public class Task4 {
     public static void printTree(int number) {

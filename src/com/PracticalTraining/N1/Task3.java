@@ -1,4 +1,4 @@
-package com.PracticalTraining;
+package com.PracticalTraining.N1;
 
 public class Task3 {
     public static double add(double num1, double num2) {
