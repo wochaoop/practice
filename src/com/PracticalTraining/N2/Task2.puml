@@ -1,0 +1,20 @@
+@startuml
+
+class ArrayUtils {
+    + reverseSortStringArray(array1: String[], array2: String[]): String[]
+    + findIntersection(array1: int[], array2: int[]): int[]
+    + findUnion(array1: float[], array2: float[]): float[]
+}
+
+ArrayUtils ..> String : has a
+ArrayUtils ..> int : has a
+ArrayUtils ..> float : has a
+
+note left of ArrayUtils
+    静态类 ArrayUtils 包含以下几个方法：
+    - reverseSortStringArray(): 字符串数组逆序排序
+    - findIntersection(): 整型数组求交集
+    - findUnion(): 浮点型数组求并集
+end note
+
+@enduml
