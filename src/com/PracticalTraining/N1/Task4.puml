@@ -1,0 +1,17 @@
+@startuml
+class TreePrinter {
+  + static printTree(number: int): void
+}
+
+class Main {
+  + static main(args: String[]): void
+}
+
+Main --> TreePrinter: Call printTree(5)
+Main --> TreePrinter: Call printTree(10)
+
+TreePrinter --> TreePrinter: for row = 1 to number
+TreePrinter --> TreePrinter:   print space
+TreePrinter --> TreePrinter:   print star
+TreePrinter --> TreePrinter:   print newline
+@enduml

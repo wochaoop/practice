@@ -1,0 +1,26 @@
+@startuml
+start
+
+:输入待判断的天数;
+:将天数对7取余，得到余数;
+
+if (余数 == 0) then (星期日)
+  :输出星期日;
+elseif (余数 == 1) then (星期一)
+  :输出星期一;
+elseif (余数 == 2) then (星期二)
+  :输出星期二;
+elseif (余数 == 3) then (星期三)
+  :输出星期三;
+elseif (余数 == 4) then (星期四)
+  :输出星期四;
+elseif (余数 == 5) then (星期五)
+  :输出星期五;
+elseif (余数 == 6) then (星期六)
+  :输出星期六;
+else
+  :输出无效的输入;
+endif
+
+stop
+@enduml
