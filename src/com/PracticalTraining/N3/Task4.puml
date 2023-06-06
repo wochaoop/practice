@@ -1,0 +1,30 @@
+@startuml
+class BankAccount {
+    - accountNumber: String
+    - accountHolderName: String
+    - address: String
+    - balance: BigDecimal
+    - interest: BigDecimal
+    - minBalance: BigDecimal (static)
+    - currentInterestRate: BigDecimal (static)
+
+    + BankAccount(accountNumber: String, accountHolderName: String, address: String, balance: double)
+    + deposit(amount: double): void
+    + withdraw(amount: double): void
+    + checkBalance(): void
+    + calculateInterest(): void
+    + accumulateInterest(): void
+    + getBalance(): BigDecimal
+    + getInterest(): BigDecimal
+    + getMinBalance(): BigDecimal (static)
+    + setMinBalance(minBalance: double): void (static)
+    + getCurrentInterestRate(): BigDecimal (static)
+    + setCurrentInterestRate(currentInterestRate: double): void (static)
+    + formatAmount(amount: BigDecimal): String
+}
+
+BankAccount --> BigDecimal
+
+note right of BankAccount: - 表示私有属性\n+ 表示公共方法\n() 表示方法\n\nBigDecimal：用于处理金额的精确计算和显示
+
+@enduml
