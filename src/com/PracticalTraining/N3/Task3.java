@@ -144,26 +144,26 @@ public class Task3 {
         cat.sleep();
 
         // 创建人类的实例并验证方法
-        Animal human = new Human();
+        Human human = new Human();
         human.eat();
         human.sleep();
-        ((Human) human).think();
-        ((Human) human).speak();
-        ((Human) human).walk();
+        human.think();
+        human.speak();
+        human.walk();
 
         // 创建鸟类的实例并验证方法
-        Animal bird = new Bird();
+        Bird bird = new Bird();
         bird.eat();
         bird.sleep();
-        ((Bird) bird).think();
-        ((Bird) bird).speak();
-        ((Bird) bird).walk();
-        ((Bird) bird).fly();
+        bird.think();
+        bird.speak();
+        bird.walk();
+        bird.fly();
 
         // 创建鱼类的实例并验证方法
-        Animal fish = new Fish();
+        Fish fish = new Fish();
         fish.eat();
         fish.sleep();
-        ((Fish) fish).swim();
+        fish.swim();
     }
 }
