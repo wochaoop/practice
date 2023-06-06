@@ -1,4 +1,4 @@
-package com.xiaoluo.example.m7.day0523;
+package com.IharaYuki.day0523;
 
 import java.util.Arrays;
 import java.util.Comparator;

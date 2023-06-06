@@ -1,4 +1,4 @@
-package com.xiaoluo.example.m7.day0518;
+package com.IharaYuki.d0518;
 
 public class info {
     public int id;
