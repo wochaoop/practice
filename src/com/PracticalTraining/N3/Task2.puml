@@ -1,0 +1,21 @@
+@startuml
+
+interface NumberOperations {
+    + int getSum(): void
+    + int getCount(): void
+}
+
+class OddNumber implements NumberOperations {
+    + int getSum(): void
+    + int getCount(): void
+}
+
+class EvenNumber implements NumberOperations {
+    + int getSum(): void
+    + int getCount(): void
+}
+
+NumberOperations <|.. OddNumber
+NumberOperations <|.. EvenNumber
+
+@enduml

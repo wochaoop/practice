@@ -1,0 +1,22 @@
+@startuml
+class Calculator {
+  + static add(a: double, b: double): double
+  + static subtract(a: double, b: double): double
+  + static multiply(a: double, b: double): double
+  + static divide(a: double, b: double): double
+}
+
+class CalculatorTest {
+  + static main(args: String[]): void
+}
+
+CalculatorTest --> Calculator: Call add(a, b)
+CalculatorTest --> Calculator: Call subtract(a, b)
+CalculatorTest --> Calculator: Call multiply(a, b)
+CalculatorTest --> Calculator: Call divide(a, b)
+
+Calculator --> Calculator: Perform addition
+Calculator --> Calculator: Perform subtraction
+Calculator --> Calculator: Perform multiplication
+Calculator --> Calculator: Perform division
+@enduml
