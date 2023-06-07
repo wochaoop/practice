@@ -25,6 +25,7 @@ class OddNumber implements Calculate {
         }
         return count;
     }
+
 }
 
 // 偶数类
@@ -46,6 +47,7 @@ class EvenNumber implements Calculate {
         }
         return count;
     }
+
 }
 
 public class Task2 {

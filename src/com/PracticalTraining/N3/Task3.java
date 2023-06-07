@@ -83,6 +83,7 @@ class Human extends Animal implements Eat, Sleep, Think, Speak, Walk {
     public void walk() {
         System.out.println("人正在行走");
     }
+
 }
 
 // 鸟类
