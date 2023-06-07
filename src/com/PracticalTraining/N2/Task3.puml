@@ -1,0 +1,44 @@
+@startuml
+
+class Student {
+    - sNO: string
+    - sName: string
+    - sSex: string
+    - sAge: int
+    - sJava: double
+
+    + Student(sNO: string, sName: string, sSex: string, sAge: int, sJava: double)
+    + getNo(): string
+    + getName(): string
+    + getSex(): string
+    + getAge(): int
+    + getJava(): double
+    + setNo(sNO: string): void
+    + setName(sName: string): void
+    + setSex(sSex: string): void
+    + setAge(sAge: int): void
+    + setJava(sJava: double): void
+}
+
+note left of Student
+    类 Student 表示学生信息，包含以下成员变量：
+    - sNO: 学号
+    - sName: 姓名
+    - sSex: 性别
+    - sAge: 年龄
+    - sJava: Java课程成绩
+
+    类 Student 包含以下方法成员：
+    - getNo(): 获取学号
+    - getName(): 获取姓名
+    - getSex(): 获取性别
+    - getAge(): 获取年龄
+    - getJava(): 获取Java课程成绩
+    - setNo(): 设置学号
+    - setName(): 设置姓名
+    - setSex(): 设置性别
+    - setAge(): 设置年龄
+    - setJava(): 设置Java课程成绩
+end note
+
+@enduml

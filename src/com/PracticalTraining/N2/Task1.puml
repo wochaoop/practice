@@ -1,0 +1,23 @@
+@startuml
+
+class Computer {
+    - brand: string
+    - model: string
+    - price: float
+
+    + Computer()
+    + Computer(brand: string, model: string, price: float)
+    + setBrand(brand: string): void
+    + getBrand(): string
+    + setModel(model: string): void
+    + getModel(): string
+    + setPrice(price: float): void
+    + getPrice(): float
+    + printDetails(): void
+    + powerOn(): void
+    + powerOff(): void
+}
+
+Computer --> "*" Computer : composition
+
+@enduml

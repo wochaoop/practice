@@ -1,0 +1,92 @@
+@startuml
+
+abstract class Animal {
+}
+
+interface Eating {
+    + eat(): void
+}
+
+interface Sleeping {
+    + sleep(): void
+}
+
+interface Thinking {
+    + think(): void
+}
+
+interface Speaking {
+    + speak(): void
+}
+
+interface Walking {
+    + walk(): void
+}
+
+interface Swimming {
+    + swim(): void
+}
+
+interface Flying {
+    + fly(): void
+}
+
+class Cat extends Animal implements Eating, Sleeping, Thinking {
+    + eat(): void
+    + sleep(): void
+    + think(): void
+}
+
+class Person extends Animal implements Eating, Sleeping, Thinking, Speaking, Walking {
+    + eat(): void
+    + sleep(): void
+    + think(): void
+    + speak(): void
+    + walk(): void
+}
+
+class Bird extends Animal implements Eating, Sleeping, Thinking, Speaking, Walking, Flying {
+    + eat(): void
+    + sleep(): void
+    + think(): void
+    + speak(): void
+    + walk(): void
+    + fly(): void
+}
+
+class Fish extends Animal implements Eating, Sleeping, Swimming {
+    + eat(): void
+    + sleep(): void
+    + swim(): void
+}
+
+Animal <|.. Cat
+Animal <|.. Person
+Animal <|.. Bird
+Animal <|.. Fish
+
+Eating <|.. Cat
+Eating <|.. Person
+Eating <|.. Bird
+Eating <|.. Fish
+
+Sleeping <|.. Cat
+Sleeping <|.. Person
+Sleeping <|.. Bird
+Sleeping <|.. Fish
+
+Thinking <|.. Cat
+Thinking <|.. Person
+Thinking <|.. Bird
+
+Speaking <|.. Person
+Speaking <|.. Bird
+
+Walking <|.. Person
+Walking <|.. Bird
+
+Swimming <|.. Fish
+
+Flying <|.. Bird
+
+@enduml

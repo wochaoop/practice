@@ -1,0 +1,41 @@
+@startuml
+
+abstract class Shape {
+    + abstract double getPerimeter()
+    + abstract double getArea()
+    + abstract String getDescription()
+}
+
+class Circle extends Shape {
+    - double radius
+
+    + Circle(radius: double)
+    + double getPerimeter()
+    + double getArea()
+    + String getDescription()
+}
+
+class Rectangle extends Shape {
+    - double length
+    - double width
+
+    + Rectangle(length: double, width: double)
+    + double getPerimeter()
+    + double getArea()
+    + String getDescription()
+}
+
+class EquilateralTriangle extends Shape {
+    - double sideLength
+
+    + EquilateralTriangle(sideLength: double)
+    + double getPerimeter()
+    + double getArea()
+    + String getDescription()
+}
+
+Shape <|-- Circle
+Shape <|-- Rectangle
+Shape <|-- EquilateralTriangle
+
+@enduml
