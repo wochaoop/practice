@@ -1,8 +1,13 @@
 package com.PracticalTraining.N4;
 
+import java.util.Scanner;
+
 public class Task4 {
     public static void main(String[] args) {
-        String str = "Hello World";
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("请输入一个字符串: ");
+        String str = scanner.nextLine();
 
         StringBuffer reversedStr = new StringBuffer();
 
@@ -17,6 +22,6 @@ public class Task4 {
         }
 
         String result = reversedStr.toString();
-        System.out.println(result);
+        System.out.println("反转并转换大小写后的字符串: " + result);
     }
 }
