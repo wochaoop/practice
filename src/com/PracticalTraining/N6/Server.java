@@ -9,17 +9,24 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class Server {
-    private static final int PORT = 8080;
+    private static final int DEFAULT_PORT = 8080;
     private static final int BACKLOG = 50;
+    private static int port;
 
     public static void main(String[] args) {
+        if (args.length > 0) {
+            port = Integer.parseInt(args[0]);
+        } else {
+            port = 8080;
+        }
+
         while (true) {
             try {
-                startServer();
+                startServer(port);
             } catch (IOException e) {
                 System.out.println("服务器错误: " + e.getMessage());
                 try {
-                    Thread.sleep(3000); // 休眠3秒后尝试重新连接
+                    Thread.sleep(3000);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
@@ -27,11 +34,11 @@ public class Server {
         }
     }
 
-    private static void startServer() throws IOException {
+    private static void startServer(int port) throws IOException {
         ServerSocket serverSocket = null;
 
         try {
-            serverSocket = new ServerSocket(PORT, BACKLOG);
+            serverSocket = new ServerSocket(port, BACKLOG);
             System.out.println("服务器已启动，等待客户端连接...");
 
             while (true) {
