@@ -8,18 +8,34 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class Client {
-    private static final String SERVER_ADDRESS = "localhost";
-    private static final int SERVER_PORT = 8080;
+    private static final String DEFAULT_SERVER_ADDRESS = "localhost";
+    private static final int DEFAULT_SERVER_PORT = 8080;
+    private static String serverAddress;
+    private static int serverPort;
 
     public static void main(String[] args) {
+        if (args.length > 0) {
+            String[] addressParts = args[0].split(":");
+            if (addressParts.length == 2) {
+                serverAddress = addressParts[0];
+                serverPort = Integer.parseInt(addressParts[1]);
+            } else {
+                System.out.println("请提供正确的服务器地址和端口号，格式为 address:port");
+                return;
+            }
+        } else {
+            serverAddress = DEFAULT_SERVER_ADDRESS;
+            serverPort = DEFAULT_SERVER_PORT;
+        }
+
         while (true) {
             try {
                 connectToServer();
-                break; // 如果连接成功，则跳出循环
+                break;
             } catch (IOException e) {
                 System.out.println("无法连接到服务器，尝试重新连接...");
                 try {
-                    Thread.sleep(3000); // 休眠3秒后尝试重新连接
+                    Thread.sleep(3000);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
                 }
@@ -28,7 +44,7 @@ public class Client {
     }
 
     private static void connectToServer() throws IOException {
-        Socket socket = new Socket(SERVER_ADDRESS, SERVER_PORT);
+        Socket socket = new Socket(serverAddress, serverPort);
         if (socket.isConnected()) {
             System.out.println("成功连接到服务器...");
         }
