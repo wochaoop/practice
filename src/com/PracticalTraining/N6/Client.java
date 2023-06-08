@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Client {
     private static final String DEFAULT_SERVER_ADDRESS = "localhost";
@@ -14,20 +16,7 @@ public class Client {
     private static int serverPort;
 
     public static void main(String[] args) {
-        if (args.length > 0) {
-            String[] addressParts = args[0].split(":");
-            if (addressParts.length == 2) {
-                serverAddress = addressParts[0];
-                serverPort = Integer.parseInt(addressParts[1]);
-            } else {
-                System.out.println("请提供正确的服务器地址和端口号，格式为 address:port");
-                return;
-            }
-        } else {
-            serverAddress = DEFAULT_SERVER_ADDRESS;
-            serverPort = DEFAULT_SERVER_PORT;
-        }
-
+        parseArguments(args);
         while (true) {
             try {
                 connectToServer();
@@ -38,6 +27,29 @@ public class Client {
                     Thread.sleep(3000);
                 } catch (InterruptedException ex) {
                     ex.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private static void parseArguments(String[] args) {
+        serverAddress = DEFAULT_SERVER_ADDRESS;
+        serverPort = DEFAULT_SERVER_PORT;
+
+        if (args.length > 0) {
+            String arg = args[0].trim();
+            if (!arg.isEmpty()) {
+                try {
+                    Pattern pattern = Pattern.compile("^(.*?):(\\d+)$");
+                    Matcher matcher = pattern.matcher(arg);
+                    if (matcher.matches()) {
+                        serverAddress = matcher.group(1);
+                        serverPort = Integer.parseInt(matcher.group(2));
+                    } else {
+                        System.out.println("无效的参数格式，使用默认值");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("无效的端口号参数，使用默认值");
                 }
             }
         }

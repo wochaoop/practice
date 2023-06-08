@@ -17,7 +17,7 @@ public class Server {
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
         } else {
-            port = 8080;
+            port = DEFAULT_PORT;
         }
 
         while (true) {
