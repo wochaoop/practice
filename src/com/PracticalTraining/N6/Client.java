@@ -15,8 +15,9 @@ public class Client {
         try {
             // 连接服务器
             Socket socket = new Socket(serverAddress, serverPort);
-            System.out.println("成功连接到服务器...");
-
+            if (socket.isConnected()) {
+                System.out.println("成功连接到服务器...");
+            }
             // 获取输入流和输出流
             BufferedReader serverReader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             PrintWriter serverWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()), true);
@@ -45,7 +46,9 @@ public class Client {
             // 关闭连接
             socket.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            // 抛出异常消息
+            // e.printStackTrace();
+            System.out.println("连接出问题了……");
         }
     }
 }
